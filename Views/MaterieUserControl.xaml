@@ -1,0 +1,31 @@
+<UserControl x:Class="OrarUniversitar.Views.MaterieUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel Margin="10">
+        <TextBlock Text="Gestionare Materii" FontSize="20" FontWeight="Bold" Margin="0,0,0,20" />
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="ID:" Width="50"/>
+            <TextBox x:Name="IdTextBox" Width="200"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="Nume Materie:" Width="100"/>
+            <TextBox x:Name="NumeMaterieTextBox" Width="200"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="Credite:" Width="100"/>
+            <TextBox x:Name="CrediteTextBox" Width="200"/>
+        </StackPanel>
+
+        <Button Content="Adaugă Materie" Width="150" Margin="0,10,0,10" Click="AdaugaMaterieButton_Click"/>
+        <DataGrid x:Name="MaterieDataGrid" AutoGenerateColumns="False" Height="200">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Nume Materie" Binding="{Binding Nume}" Width="150"/>
+                <DataGridTextColumn Header="Credite" Binding="{Binding Credite}" Width="50"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
+</UserControl>

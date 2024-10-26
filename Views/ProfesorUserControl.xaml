@@ -1,0 +1,37 @@
+<UserControl x:Class="OrarUniversitar.Views.ProfesorUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel Margin="10">
+        <TextBlock Text="Gestionare Profesori" FontSize="20" FontWeight="Bold" Margin="0,0,0,20" />
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="ID:" Width="50"/>
+            <TextBox x:Name="IdTextBox" Width="200"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="Nume:" Width="50"/>
+            <TextBox x:Name="NumeTextBox" Width="200"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="Prenume:" Width="50"/>
+            <TextBox x:Name="PrenumeTextBox" Width="200"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="Departament:" Width="50"/>
+            <TextBox x:Name="DepartamentTextBox" Width="200"/>
+        </StackPanel>
+
+        <Button Content="Adaugă Profesor" Width="150" Margin="0,10,0,10" Click="AdaugaProfesorButton_Click"/>
+        <DataGrid x:Name="ProfesorDataGrid" AutoGenerateColumns="False" Height="200">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Nume" Binding="{Binding Nume}" Width="100"/>
+                <DataGridTextColumn Header="Prenume" Binding="{Binding Prenume}" Width="100"/>
+                <DataGridTextColumn Header="Departament" Binding="{Binding Departament}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
+</UserControl>

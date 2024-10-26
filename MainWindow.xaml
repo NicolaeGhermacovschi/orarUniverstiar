@@ -1,0 +1,16 @@
+<Window x:Class="OrarUniversitar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Orar Universitar" Height="450" Width="800">
+    <TabControl>
+        <TabItem Header="Materii">
+            <local:MaterieUserControl />
+        </TabItem>
+        <TabItem Header="Săli">
+            <local:SalaUserControl />
+        </TabItem>
+        <TabItem Header="Orar">
+            <local:OrarUserControl />
+        </TabItem>
+    </TabControl>
+</Window>
